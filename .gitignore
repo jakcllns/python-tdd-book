@@ -1,0 +1,6 @@
+db.sqlite3
+virtualenv
+Chrome Web Driver
+Internet Explorer Web Driver
+__pycache__
+*.pyc
