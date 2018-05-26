@@ -3,12 +3,12 @@ from selenium.webdriver.common.keys import Keys
 import time
 import unittest
 
-path = "E:\\Git Repository\\python-tdd-book\\Internet Explorer Web Driver\\IEDriverServer.exe"
+path = "E:\\Git Repository\\python-tdd-book\\Chrome Web Driver\\chromedriver.exe"
 
 class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
-        self.browser = webdriver.Ie(path)
+        self.browser = webdriver.Chrome(path)
 
     def tearDown(self):
         self.browser.quit()
