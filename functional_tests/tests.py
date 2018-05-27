@@ -114,7 +114,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Francis gets his own unique URL
         francis_list_url = self.browser.current_url
-        self.assertRegex(francis_list_url, '/list/.+')
+        self.assertRegex(francis_list_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_list_url)
 
         # Again, there is no trace of Edith's list
@@ -127,7 +127,7 @@ class NewVisitorTest(LiveServerTestCase):
         # Edith wonders whether the site will remember her lst. Then she sees
         # that the site has generated a unique URL for her -- there is some
         # explanatory test to that effect.
-        self.fail('Finish the test!')
+        
         # She visists that URL - her to-do list is still there.
 
         #Satisfied, she goes back to sleep
