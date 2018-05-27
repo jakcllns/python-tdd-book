@@ -11,8 +11,8 @@ ie_driver = "E:\\Git Repository\\python-tdd-book\\Internet Explorer Web Driver\\
 class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
-        #self.browser = webdriver.Chrome(path)
-        self.browser = webdriver.Ie(ie_driver)
+        self.browser = webdriver.Chrome(path)
+        #self.browser = webdriver.Ie(ie_driver)
         staging_server = os.environ.get('STAGING_SERVER')  
         if staging_server:
             self.live_server_url = 'http://' + staging_server  
