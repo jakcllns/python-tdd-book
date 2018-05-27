@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 import time
+import os
 
 MAX_WAIT = 10
 path = "E:\\Git Repository\\python-tdd-book\\Chrome Web Driver\\chromedriver.exe"
@@ -11,6 +12,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome(path)
+        staging_server = os.environ.get('STAGING_SERVER')
+        if staging_server:
+            self.live_server_url = 'http://' + staging_server
         #self.browser = webdriver.Ie(ie_driver)
         
     def tearDown(self):
