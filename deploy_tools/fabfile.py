@@ -5,7 +5,7 @@ from fabric.api import cd, env, local, run
 REPO_URL = 'https://github.com/jakcllns/python-tdd-book'
 
 def deploy():
-	site_folder = f'/home/{evn.user}/sites/{env.host}'
+	site_folder = f'/home/{env.user}/sites/{env.host}'
 	run(f'mkdir -p {site_folder}')
 	with cd(site_folder):
 		_get_lastest_source()
